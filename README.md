@@ -6,10 +6,11 @@ What it does:
 You select any two NBA home and away matchups and adjust their sequential Elo ratings, and the model instantly predicts the home team's win probability and projected matchup outcome using an L2-regularized logistic regression classifier.
 
 How it works:
-Data Ingestion:** Pulls multi-season NBA game logs using the `nba_api` package.
+Data Ingestion: Pulls multi-season NBA game logs using the `nba_api` package.
+
 Feature Engineering: Builds a chronological sequential Elo rating engine with seasonal resets to track dynamic team strength without data leakage.
-Model Training:** Trains an L2-regularized Logistic Regression model optimized via `GridSearchCV`, `StandardScaler`, and `TimeSeriesSplit` cross-validation.
-Validation:** Evaluated strictly out-of-sample on unseen future temporal splits, achieving an 0.8110 ROC-AUC.
+
+Model Training and Validation: Trains an L2-regularized Logistic Regression model optimized via `GridSearchCV`, `StandardScaler`, and `TimeSeriesSplit` cross-validation. Achieved an 0.8110 ROC-AUC when testing on unseen future NBA games.
 Interactive Dashboard: Serves real-time inference through a lightweight Streamlit web application.
 
 Results:
