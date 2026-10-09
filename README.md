@@ -1,4 +1,5 @@
 NBA Matchup & Win Probability Predictor
+
 I built this project to accurately forecast NBA game outcomes and model team win probabilities using historical data, sequential machine learning pipelines, and an interactive decision-support dashboard.
 
 What it does:
